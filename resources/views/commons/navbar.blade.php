@@ -14,16 +14,16 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
                         <li>
-                            <a href="#">
+                            <a href="{{ route('items.create') }}">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                 アイテムを追加
-                              </a>
+                            </a>
                         </li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="gravatar">
-                                    <img src="{{ Gravatar::src(Auth::user()->email, 20) . '&d=mm' }}" alt="" class="img-circle">
+                                    <img src="{{ Gravatar::src(Auth::user()->email, 20). '&d=mm' }}" alt="" class="img-circle">
                                 </span>
                                 {{ Auth::user()->name }}
                                 <span class="caret"></span>
